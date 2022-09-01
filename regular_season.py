@@ -8,6 +8,8 @@ class RegularSeason:
         self.records = {}
         for team in teams.values():
             self.records[team.team_id] = {'wins':0,'losses':0}
+
+    # this is a  long function. consider breaking it.
     def simulate_season(self):
         with open("2021_regular_season.csv", 'r') as f:
             df = pd.read_csv(f)

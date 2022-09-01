@@ -20,6 +20,7 @@ for team in team_instances.values():
 win_tracker = {}
 clinched_playoffs = {}
 
+# since you program is a bit complicated - it would help a bit of comments/documentation 
 while True:
     one = RegularSeason(team_instances)
     for team in team_instances.values():
@@ -46,6 +47,7 @@ while True:
             for team in team_instances.values():
                 del team
 
+            # you already have this code above - put it in a function.
             picklefile = open('team_instances', 'rb')
             team_instances = pickle.load(picklefile)
             picklefile.close()
@@ -58,7 +60,7 @@ while True:
             print(f"{team} have {win_tracker[team]['wins'] / int(user)} chanse of winning")
         for team in clinched_playoffs:
             print(f"{team} have {clinched_playoffs[team]['cinched']/int(user)} chanse of clinching the playoffs")
-
+        # maybe consider saving this information for future use.
     else:
         if user == 'e':
             break
