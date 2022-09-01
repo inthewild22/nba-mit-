@@ -40,6 +40,8 @@ class Playoffs:
 
         champions = self.sieries(home_team, awau_team,0)
         return champions
+
+
     def sieries(self, team1, team2,confrence):
         conf_id =[]
         if confrence == 0:
@@ -70,7 +72,8 @@ class Playoffs:
             team2_wins = 0
 
 
-
+# i dont understand why conference = 0 is different. can you explain? 
+# seems like there is duplicate code here - that should be in another function maybe
             if conf_id.index(int(team1.team_id)) < conf_id.index(int(team2.team_id)):
                 home =  Game(team1, team2)
                 away = Game(team2, team1)

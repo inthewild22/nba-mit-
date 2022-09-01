@@ -2,7 +2,13 @@ import pickle
 from regular_season import RegularSeason
 from playoffs import Playoffs
 
-
+# overall - great work! 
+# you have a lot of logic that works well.
+# for the course future puposes - think about the data you can save in db. 
+# for example: 
+# save the games in a table (this way you can see history of the games). etc.
+# 
+# pay attention to my comments
 
 
 
@@ -60,7 +66,10 @@ while True:
             print(f"{team} have {win_tracker[team]['wins'] / int(user)} chanse of winning")
         for team in clinched_playoffs:
             print(f"{team} have {clinched_playoffs[team]['cinched']/int(user)} chanse of clinching the playoffs")
-        # maybe consider saving this information for future use.
+        # in the end when i run it i get very liitle feedback on the screen
+        # only the chance of clinching the playoffs and winning.
+        # i would like to see results. who won . maybe print it nicely :) or display in html now that we progress
+
     else:
         if user == 'e':
             break
